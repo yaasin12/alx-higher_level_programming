@@ -9,7 +9,7 @@ request(API_URL + episodeNum, function (err, response, body) {
     console.log(err);
   } else if (response.statusCode === 200) {
     const responseJSON = JSON.parse(body);
-    console.log(responseJSON.title);
+    console.log(JSON.parse(body).title);
   } else {
     console.log('Error code: ' + response.statusCode);
   }
